@@ -103,20 +103,20 @@ def main():
         # contours = cv2.findContours(frame_threshed.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[1] 
 
 
-        for contour in contours:
-            if cv2.contourArea(contour) < min_contour_area:
-                continue
+        # for contour in contours:
+        #     # if cv2.contourArea(contour) < min_contour_area:
+        #     #     continue
 
-            (x1, y1, w1, h1) = cv2.boundingRect(contour)
-            # (x2, y2, w2, h2) = cv2.boundingRect(contour_WHITE)
-            # (x3, y3, w3, h3) = cv2.boundingRect(contour_BLACK)
+        #     (x1, y1, w1, h1) = cv2.boundingRect(contour)
+        #     # (x2, y2, w2, h2) = cv2.boundingRect(contour_WHITE)
+        #     # (x3, y3, w3, h3) = cv2.boundingRect(contour_BLACK)
 
-            # print(x)
-            # print(y)
-            cv2.rectangle(frame, (200+x1 + 10,160+y1 + 10), (x1 + w1 + 200 + 10, y1 + 160 + h1 + 10), (0, 0, 255), 2)
-            # cv2.rectangle(frame, (200+x2 + 10,160+y2 + 10), (x2 + w2 + 200 + 10, y2 + 160 + h2 + 10), (0, 0, 255), 2)
-            # cv2.rectangle(frame, (200+x3 + 10,160+y3 + 10), (x3 + w3 + 200 + 10, y3 + 160 + h3 + 10), (0, 0, 255), 2)
-            # cv2.rectangle(frame_threshed, (x+10, y+10), (x + w, y + h), (255, 255, 255), 2)
+        #     # print(x)
+        #     # print(y)
+        #     cv2.rectangle(frame, (200+x1 + 10,160+y1 + 10), (x1 + w1 + 200 + 10, y1 + 160 + h1 + 10), (0, 0, 255), 2)
+        #     # cv2.rectangle(frame, (200+x2 + 10,160+y2 + 10), (x2 + w2 + 200 + 10, y2 + 160 + h2 + 10), (0, 0, 255), 2)
+        #     # cv2.rectangle(frame, (200+x3 + 10,160+y3 + 10), (x3 + w3 + 200 + 10, y3 + 160 + h3 + 10), (0, 0, 255), 2)
+        #     # cv2.rectangle(frame_threshed, (x+10, y+10), (x + w, y + h), (255, 255, 255), 2)
 
         # cv2.putText(frame, motionStatus, (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
         maskOn = False
